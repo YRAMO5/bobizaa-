@@ -28,7 +28,7 @@ async function fetchPrayerTimes(q) {
     const $ = cheerio.load(html);
 
     const prayerTimes = {
-      date: $('b:contains("الإثنين الثلاالثلاثاء الأربعاء الخميس الجمعة السبت")').text().trim(), // Mengambil informasi tanggal adzan saat ini
+      date: $('b:contains("الإاثنين"الثلاثاء" "الأربعاء" "الخميس" "الجمعة" "السبت")').text().trim(), // Mengambil informasi tanggal adzan saat ini
       fajr: $('td:contains("موعد اذان الفجر")').next().text().trim(), // Mengambil waktu adzan Fajr
       dhuhr: $('td:contains("موعد اذان الظهر")').next().text().trim(), // Mengambil waktu adzan Dhuhr
       asr: $('td:contains("موعد اذان العصر")').next().text().trim(), // Mengambil waktu adzan Asr
